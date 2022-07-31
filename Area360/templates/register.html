@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block title %}
+Register
+{% endblock title %}
+{% block body %}
+<section>
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3 my-5">
+    <div class="container h-60">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5" style="font-size: 1.5rem;">Create an account</h2>
+
+              <form action="" method="post">
+                {% csrf_token %}
+                <div class="form-outline mb-2">
+                  <input type="radio" name="ownership" id="ownership" value="Owner" required />
+                  <label class="form-label" for="form3Example1cg">Owner/Buyer</label>
+                  <input type="radio" name="ownership" id="ownership" class="ml-3" value="Builder" required />
+                  <label class="form-label" for="form3Example1cg">Builder</label>
+                </div>
+
+                <div class="form-outline mb-2">
+                  <input type="text" name="firstname" id="firstname" class="form-control form-control-lg" required />
+                  <label class="form-label" for="form3Example1cg">First Name</label>
+                </div>
+
+                <div class="form-outline mb-2">
+                  <input type="text" name="lastname" id="lastname" class="form-control form-control-lg" required />
+                  <label class="form-label" for="form3Example1cg">Last Name</label>
+                </div>
+
+                <div class="form-outline mb-2">
+                  <input type="tel" name="mobile" id="mobile" class="form-control form-control-lg" required />
+                  <label class="form-label" for="form3Example4cdg">Mobile No</label>
+                </div>
+
+                <div class="form-outline mb-2">
+                  <input type="email" name="email" id="email" class="form-control form-control-lg" required />
+                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                </div>
+
+                <div class="form-outline mb-2">
+                  <input type="password" name="password" id="password" class="form-control form-control-lg" required />
+                  <label class="form-label" for="form3Example4cg">Password</label>
+                </div>
+
+                <div class="form-check d-flex mb-5">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" required />
+                  <label class="form-check-label" for="form2Example3g">
+                    I agree all statements in <a href="#!" style="color: #FF8F56;"><u>Terms of service</u></a>
+                  </label>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-lg"
+                    style="color: #fff;background-color: #26BAEE; padding:0.5rem 3rem; font-size: 1.2rem;">Register</button>
+                </div>
+                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" class="fw-bold"
+                    style="color: #FF8F56;"><u>Login here</u></a></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}
